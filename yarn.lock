@@ -62,7 +62,7 @@
   resolved "http://registry.npm.taobao.org/@babel/helper-call-delegate/download/@babel/helper-call-delegate-7.1.0.tgz#6a957f105f37755e8645343d3038a22e1449cc4a"
   dependencies:
     "@babel/helper-hoist-variables" "^7.0.0"
-    "@babel/traverse" "^7.1.0"
+    "@babel/traverse" "^7.1.0"z
     "@babel/types" "^7.0.0"
 
 "@babel/helper-define-map@^7.1.0":
