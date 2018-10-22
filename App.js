@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
   },
   buchong:{
       textAlign: 'center',
-      color: '#122215',
+      color: '#ff8969',
       marginBottom: 10,
+      backgroundColor:'#81ff98',
   },
 });
