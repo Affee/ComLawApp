@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,Button} from 'react-native';
+import {Platform, StyleSheet, Text, View,ListView} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,16 +18,32 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+
+  constructor(){
+    super();
+    const ds = new ListView.DataSource({rowHasChanged:(r1,r2) => r1 !== r2});
+    this.state = {
+      dataSource:ds.cloneWithProps(['row 1','row 2']),
+    };
+  }
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View style={{flex: 1}}>
+        <ListView dataSource={this.state.ds}
+                  renderRow={this.state.dataSource}
+
+
+        />
       </View>
+      // <ListView
+      //     dataSource={this.state.dataSource}
+      //     renderRow={(rowData) => <Text>{rowData}</Text>}
+      // />
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -47,5 +63,5 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
- 
+
 });
