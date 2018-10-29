@@ -17,13 +17,23 @@ import {Platform, StyleSheet,View,ListView,Image} from 'react-native';
 // });
 // 导入json数据
 
-type Props = {};
+const data = [
+        {"name" : "Melody", age: 21},
+        {"name" : "ZZ", age: 22},
+            ];
+let ds = new ListView.DataSource({
+      rowHasChanged:(r1,r2) => !== r2,
+      sectionHeaderHasChanged:(s1,s2) => s1 !== s2
+      });
+      this.state = {
+        dataSource:ds.cloneWithRows(data)
+      };
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={{flex: 1}}>
       <h1>
-      ssds
+
       </h1>
 
       </View>
