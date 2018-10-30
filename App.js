@@ -7,36 +7,62 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet,View,ListView,Image} from 'react-native';
+import {StyleSheet,View,ListView,Image} from 'react-native';
 
-// const instructions = Platform.select({
-//   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-//   android:
-//     'Double tap R on your keyboard to reload,\n' +
-//     'Shake or press menu button for dev menu',
-// });
-// 导入json数据
-
+//json shuju
 const data = [
-        {"name" : "Melody", age: 21},
-        {"name" : "ZZ", age: 22},
-            ];
-let ds = new ListView.DataSource({
-      rowHasChanged:(r1,r2) => !== r2,
-      sectionHeaderHasChanged:(s1,s2) => s1 !== s2
-      });
-      this.state = {
-        dataSource:ds.cloneWithRows(data)
-      };
+    {
+        "image":"1.png",
+        "title":"天蓝蓝地蓝蓝，拉起锚开起船",
+        "name":"复仇焰魂 布兰德"
+    },
+    {
+        "image":"2.png",
+        "title":"天蓝蓝地蓝蓝，拉起锚开起船",
+        "name":"复仇焰魂 布兰德"
+    },
+    {
+        "image":"3.png",
+        "title":"天蓝蓝地蓝蓝，拉起锚开起船",
+        "name":"复仇焰魂 布兰德"
+    },
+    {
+        "image":"4.png",
+        "title":"天蓝蓝地蓝蓝，拉起锚开起船",
+        "name":"复仇焰魂 布兰德"
+    },
+    {
+        "image":"5.png",
+        "title":"天蓝蓝地蓝蓝，拉起锚开起船",
+        "name":"复仇焰魂 布兰德"
+    },
+    {
+        "image":"6.png",
+        "title":"天蓝蓝地蓝蓝，拉起锚开起船",
+        "name":"复仇焰魂 布兰德"
+    },
+  ];
+
+
 export default class App extends Component<Props> {
+  //构造函数数据的初始化
+    constructor(props){
+        super(props);
+        this.state = {
+            var ds = new ListView.DataSource({rowHasChanged:(r1,r2)=>r1 !== r2});
+            this.state = {
+                dataSource: ds.cloneWithRows(data)
+            }
+        }
+    }
+
   render() {
     return (
-      <View style={{flex: 1}}>
-      <h1>
+      <ListView
+          dataSource={this.state.dataSource}//设置数据源
+          renderRow={ this.render}
 
-      </h1>
-
-      </View>
+      />
     );
   }
 }
