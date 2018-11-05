@@ -61,14 +61,47 @@ export default class App extends Component<Props> {
 
   render() {
     return (
+        <View>
+            <View>
+
+            </View>
+            <ListView
+                dataSource={this.state.dataSource}
+                renderRow={this.renderRow}
+
+            />
+
+        </View>
+
       <ListView
           style={ {marginTop: 25}}
           dataSource={this.state.dataSource}//设置数据源
           renderRow={ this.renderRow}
+          renderSectionHeader = {this.renderSectionHeader}
 
       />
     );
   }
+
+    renderSectionHeader(){
+            return(
+            <View>
+                <Text
+            </View>
+            )
+    }
+
+  返回每一行cell
+    renderRow(rowData){
+        return(
+            <TouchableOpacity>
+
+            </TouchableOpacity>
+
+        }
+
+        )
+    }
   //返回具体的cell
   renderRow(rowData,sectionID,rowID,highlightRow){
     console.log(sectionID,rowID);
@@ -88,6 +121,7 @@ export default class App extends Component<Props> {
                           {/*numberOfLines={3}*/}
                     {/*>{rowData.title}*/}
                     {/*</Text>*/}
+
 
                 </View>
 
