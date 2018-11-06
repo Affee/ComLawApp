@@ -21,13 +21,7 @@ export default class App extends Component<Props> {
     );
   }
 
-    renderSectionHeader(){
-            return(
-            <View>
-                <Text
-            </View>
-            );
-    }
+   
 
 }
     AppRegistry.registerComponent('NavTest',() => NavTest);
