@@ -35,8 +35,8 @@ export default class HKTabBar extends Component<Props> {
         <TouchableOpacity onPress={()=>this.props.goToPage(i)}
             key={i}
         >
-            <View/>
-        </TouchableOpacity>
+
+
 
     }
 
