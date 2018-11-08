@@ -8,20 +8,15 @@
 
 import React, {Component} from 'react';
 import {StyleSheet,View,ListView,Image,TouchableOpacity,AlertIOS} from 'react-native';
-
-
-import NavDemo from './NavDemo.js'
+import HkMain from './Component/HKMain'
 
 export default class App extends Component<Props> {
-  render() {
-    return (
-        <View style={styles.container}>
 
-        </View>
-    );
-  }
-
-   
+    render() {
+        return (
+            <HkMain/>
+        );
+    }
 
 }
-    AppRegistry.registerComponent('NavTest',() => NavTest);
+
