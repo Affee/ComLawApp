@@ -3,13 +3,13 @@ import {StyleSheet,View,ListView,Image,TouchableOpacity,AlertIOS,Text} from 'rea
 
 
 
-export default class HKTabBar extends Component<Props> {
+export default class HKBase extends Component<Props> {
 
     render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.instructions}>
-                    基础tabbar
+                    基础
                 </Text>
             </View>
 
