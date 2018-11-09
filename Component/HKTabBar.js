@@ -27,18 +27,10 @@ export default class HKTabBar extends Component<Props> {
                 }
 
             </View>
-
+                
         );
     }
 
-    renderItem(tab, i) {
-        <TouchableOpacity onPress={()=>this.props.goToPage(i)}
-            key={i}
-        >
-            <View/>
-        </TouchableOpacity>
-
-    }
 
 }
 
